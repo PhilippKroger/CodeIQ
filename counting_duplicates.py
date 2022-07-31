@@ -34,13 +34,9 @@ def duplicate_count(text):
     for i in range(len(dv)):
         if dv[i] > 1:
             k_dv += 1
-    if len(dv) == 0:
-        return 0
-    if max(dv) == 1:
-        return 0
-    if k_dv > 1:
-        return k_dv
-    if k_dv == 1:
-        return 1
+    if len(dv) == 0: return 0
+    if max(dv) == 1: return 0
+    if k_dv > 1: return k_dv
+    if k_dv == 1: return 1
 
 print(duplicate_count("abcdeaa"))  # 1
