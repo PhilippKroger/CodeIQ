@@ -16,10 +16,10 @@ to_weird_case('String'); # => returns 'StRiNg'
 to_weird_case('Weird string case') # => returns 'WeIrD StRiNg CaSe'
 """
 
-def to_weird_case(string):
+def to_weird_case(words):
     index = 0
     new_string = ''
-    for word in string:
+    for word in words:
         if word == ' ':
             index = -1
             new_string += word
