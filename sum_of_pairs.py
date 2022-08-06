@@ -13,7 +13,4 @@ def sum_pairs(ints, s):
                 print(l, l_ind)
 
 
-
-
-
 print(sum_pairs([10, 5, 2, 3, 7, 5],  10))
