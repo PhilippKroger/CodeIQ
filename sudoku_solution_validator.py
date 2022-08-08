@@ -7,11 +7,6 @@ https://github.com/justinzhou93/Codewars-Python-practice/blob/master/Sudoku-solu
 def valid_solution(board):
     k = 0
 
-    for i in range(len(board)):  # Проверка по горизонтали
-        if len(board[i]) == len(set(board[i])):
-            k += 1
-        else:
-            return False
     vert_l = []
     for i in range(len(board)):  # Проверка по вертикали left
         if board[i][0] not in vert_l:
@@ -19,13 +14,6 @@ def valid_solution(board):
             k += 1
         else:
             continue
-
-    for i in range(len(board)):  #
-        for j in range(i+1, len(board)):
-            if board[i][i] != board[j][j]:
-                print(board[i], board[j], board[i][i], board[j][j])
-            else:
-                continue
 
     vert_r = []
     for i in range(len(board)):  # Проверка по вертикали right
@@ -35,20 +23,76 @@ def valid_solution(board):
         else:
             continue
 
-    if k == 18:
+    vert_r_7 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][7] not in vert_r_7:
+            vert_r_7.append(board[i][7])
+            k += 1
+        else:
+            continue
+
+    vert_r_6 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][6] not in vert_r_6:
+            vert_r_6.append(board[i][6])
+            k += 1
+        else:
+            continue
+
+    vert_r_5 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][5] not in vert_r_5:
+            vert_r_5.append(board[i][5])
+            k += 1
+        else:
+            continue
+
+    vert_r_4 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][4] not in vert_r_4:
+            vert_r_4.append(board[i][4])
+            k += 1
+        else:
+            continue
+
+    vert_r_3 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][3] not in vert_r_3:
+            vert_r_3.append(board[i][3])
+            k += 1
+        else:
+            continue
+
+    vert_r_2 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][2] not in vert_r_2:
+            vert_r_2.append(board[i][2])
+            k += 1
+        else:
+            continue
+
+    vert_r_1 = []
+    for i in range(len(board)):  # Проверка по вертикали right
+        if board[i][1] not in vert_r_1:
+            vert_r_1.append(board[i][1])
+            k += 1
+        else:
+            continue
+
+    if k == 180:
         return True
     else:
         return False
 
 
 print(valid_solution(
-    [[1, 2, 3, 4, 5, 6, 7, 8, 9]
-        , [2, 3, 4, 5, 6, 7, 8, 9, 1]
-        , [3, 4, 5, 6, 7, 8, 9, 1, 2]
-        , [4, 5, 6, 7, 8, 9, 1, 2, 3]
-        , [5, 6, 7, 8, 9, 1, 2, 3, 4]
-        , [6, 7, 8, 9, 1, 2, 3, 4, 5]
-        , [7, 8, 9, 1, 2, 3, 4, 5, 6]
-        , [8, 9, 1, 2, 3, 4, 5, 6, 7]
-        , [9, 1, 2, 3, 4, 5, 6, 7, 8]]
+    [[5, 3, 4, 6, 7, 8, 9, 1, 2],
+     [6, 7, 2, 1, 9, 5, 3, 4, 8],
+     [1, 9, 8, 3, 4, 2, 5, 6, 7],
+     [8, 5, 9, 7, 6, 1, 4, 2, 3],
+     [4, 2, 6, 8, 5, 3, 7, 9, 1],
+     [7, 1, 3, 9, 2, 4, 8, 5, 6],
+     [9, 6, 1, 5, 3, 7, 2, 8, 4],
+     [2, 8, 7, 4, 1, 9, 6, 3, 5],
+     [3, 4, 5, 2, 8, 6, 1, 7, 9]]
 ))
