@@ -3,9 +3,6 @@ def same_structure_as(original, other):
     original = str(original)
     other = str(other)
 
-    #  print("original)))", original)
-    #  print("other))))))", other)
-
     new_original = ''
     new_other = ''
 
@@ -15,9 +12,6 @@ def same_structure_as(original, other):
     for i in range(len(other)):
         if other[i] in '[],':
             new_other += other[i]
-    #  print("new_original) ", new_original)
-    #  print("new_other)))) ", new_other)
-    #  print("new_original_rev) ", new_original[::-1])
 
     new_original_rev = new_original[::-1]
     new_original_rev_d = ''
