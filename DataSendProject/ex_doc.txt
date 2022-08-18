@@ -1,0 +1,114 @@
+(English)
+Project: The function of transferring money from one user in the database to another (pseudo -code)
+Task: Create a function of transferring money
+Progress:
+1) extract data from the resulting file 'Base.txt'
+2) move all the data from the file to the dictionary
+    Maks 120
+    VLAD 190
+    Sina 30
+    IVAN 45
+    Nikita 160 -> {'Maks': 120, 'VLAD': 190, 'Sina': 30, 'IVAN': 45,
+    Seraphim 745 'Nikita': 160, 'seraphim': 745, 'jane': 412, 'Joe': 11,
+     Jane 412 'Kevin': 98, 'Alex': 533}
+    Joe 11
+    Kevin 98
+    Alex 533
+3) Bring a dictionary
+4) create a variable for entering from the user
+   Three words need to be introduced: the name of the sender, the name of the recipient, the amount of the translation
+   User_input = Input ("Enter:")
+5) Based on the received data from the user, make a translation
+   Example:
+   User introduced: Maks VLAD 20
+   -> you need to write a function that reduces 20 at Maks and adds 20 to vlad
+   It was {'Maks': 120, 'vlad': 190, ...}
+   It became {'Maks': 100, 'VLAD': 210, ...}
+6) dedicate the resulting dictionary
+7)
+    Write the received data in a new file in table format
+    Not like that:                But like this:
+    ===================================================
+    Maks 120               Maks     120
+    Vlad 190               Vlad     190
+    Sina 30                Sina     30
+    Ivan 45                Ivan     45
+    Nikita 160             Nikita   160
+    Seraphim 745           Seraphim 745
+    Jane 412               Jane     412
+    Joe 11                 Joe      11
+    Kevin 98               Kevin    98
+    Alex 533               Alex     533
+
+
+
+(Russian)
+Проект: Функция перевода денег от одного пользователя в базе к другому (псевдокод)
+Задача: Создать функцию перевода денег
+Ход работы:
+1) Извлечь данные из полученного файла 'base.txt'
+2) Переместить все данные из файла в словарь
+    Maks 120
+    Vlad 190
+    Sina 30
+    Ivan 45
+    Nikita 160     -->   {'Maks': 120, 'Vlad': 190, 'Sina': 30, 'Ivan': 45,
+    Seraphim 745         'Nikita': 160, 'Seraphim': 745, 'Jane': 412, 'Joe': 11,
+     Jane 412            'Kevin': 98, 'Alex': 533}
+    Joe 11
+    Kevin 98
+    Alex 533
+3) Вывести словарь
+4) Создать переменную для ввода от пользователя
+   Нужно ввести три слова: имя отправителя, имя получателя, сумму перевода
+   user_input = input("Enter: ")
+5) На основе полученных данных от пользователя сделать перевода
+   Пример:
+   Пользователь ввёл: Maks Vlad 20
+   -> Нужно написать функцию, которая убавляет 20 у Maks и добавляет 20 к Vlad
+   Было  {'Maks': 120, 'Vlad': 190, ...}
+   Стало {'Maks': 100, 'Vlad': 210, ...}
+6)Вывести получившийся словарь
+7) По желанию:
+    Записать полученные данные в новый файл в формате таблицы
+    Не так:                А вот так:
+    Maks 120               Maks     120
+    Vlad 190               Vlad     190
+    Sina 30                Sina     30
+    Ivan 45                Ivan     45
+    Nikita 160             Nikita   160
+    Seraphim 745           Seraphim 745
+    Jane 412               Jane     412
+    Joe 11                 Joe      11
+    Kevin 98               Kevin    98
+    Alex 533               Alex     533
+
+
+
+(Chinese)
+ 項目：將資金從數據庫中的一個用戶轉移到另一個用戶（偽代碼）的功能
+任務：創建轉移資金的函數
+進步：
+1）從結果文件“ base.txt”中提取數據
+2）將所有數據從文件移動到字典
+    麥克斯120
+    弗拉德190
+    西娜30
+    伊万45
+    Nikita 160-> {'Maks'：120，'vlad'：190，'sina'：30，'ivan'：45，
+    Seraphim 745'Nikita'：160，'Seraphim'：745，'Jane'：412，'Joe'：11，
+     簡412'Kevin'：98，'Alex'：533}
+    喬11
+    凱文98
+    亞歷克斯533
+3）帶上詞典
+4）創建一個用於從用戶輸入的變量
+   需要介紹三個單詞：發件人的名稱，收件人的名稱，翻譯的數量
+   USER_INPUT =輸入（“ Enter：”）
+5）根據用戶收到的數據，進行翻譯
+   例子：
+   介紹用戶：maks vlad 20
+    - >您需要編寫一個在MAKS上減少20個功能，並將20個添加到Vlad
+   是{'maks'：120，'vlad'：190，...}
+   它變成{'maks'：100，'vlad'：210，...}
+6）專用於由此產生的詞典

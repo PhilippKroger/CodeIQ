@@ -1,0 +1,10 @@
+User: Maks     | Balance: 100
+User: Vlad     | Balance: 210
+User: Sina     | Balance: 30
+User: Ivan     | Balance: 45
+User: Nikita   | Balance: 160
+User: Seraphim | Balance: 745
+User: Jane     | Balance: 412
+User: Joe      | Balance: 11
+User: Kevin    | Balance: 98
+User: Alex     | Balance: 533
