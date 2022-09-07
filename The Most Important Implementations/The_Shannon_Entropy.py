@@ -1,3 +1,9 @@
+"""
+Information entropy is a measure of the uncertainty of the certainty of a system,
+in particular, the accuracy of detecting any regular reading character.
+"""
+
+
 from math import log
 
 def entropy_wht_shannon(s):
