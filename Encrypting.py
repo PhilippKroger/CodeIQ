@@ -1,6 +1,5 @@
 alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 
-
 # Encrypting a message with a Caesar cipher
 def caesar_cipher(message, key):
     b = ''

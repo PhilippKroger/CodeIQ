@@ -6,12 +6,12 @@ error_2 = "The example is wrong"
 
 # calculation function
 def p(op, a, b):
-    a = int(a) # str to int
-    b = int(b) # str to int
-    if op == "+": return b+a
-    if op == "-": return b-a
-    if op == "*": return b*a
-    if op == "/": return b/a
+    a = int(a)  # str to int
+    b = int(b)  # str to int
+    if op == "+": return b + a
+    if op == "-": return b - a
+    if op == "*": return b * a
+    if op == "/": return b / a
 
 
 stack_nums = []  # stack for operands
@@ -53,11 +53,11 @@ while i < len(data) or len(stack_operators) > 0:
             i = i + 1
         elif stack_operators[-1] in '+-/*':
             stack_nums.append(p(stack_operators.pop(), stack_nums.pop(), stack_nums.pop()))
-    elif data[i]=="=":  # 1
-        if len(stack_operators)==0:
+    elif data[i] == "=":  # 1
+        if len(stack_operators) == 0:
             print(stack_nums.pop())
             break
-        elif stack_operators[-1]=="(":
+        elif stack_operators[-1] == "(":
             print(error_2)
             break
         elif stack_operators[-1] in '+-/*':
