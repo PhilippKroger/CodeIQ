@@ -1,5 +1,6 @@
 alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 
+
 # Encrypting a message with a Caesar cipher
 def caesar_cipher(message, key):
     b = ''
@@ -11,7 +12,9 @@ def caesar_cipher(message, key):
             y = (x + key) % (len(alphabet))
             b += alphabet[y]
     return b
-print(caesar_cipher('ПРИВЕТ', 3)) # Your message and letter shift
+
+
+print(caesar_cipher('ПРИВЕТ', 3))  # Your message and letter shift
 
 
 # Decoding a message encrypted with a Caesar cipher
@@ -25,12 +28,13 @@ def caesar_cipher_decoder(message, key):
             y = x - key
             a += alphabet[y]
     return a
-print(caesar_cipher_decoder('ПРИВЕТ', 3)) # Your message and letter shift
+
+
+print(caesar_cipher_decoder('ПРИВЕТ', 3))  # Your message and letter shift
 
 
 # Encrypting a message with a Vigenere cipher
 def vigenere_cipher(message, key):
-
     k = []
     for i in range(len(key)):
         k.append(alphabet.find(key[i]))
@@ -40,8 +44,9 @@ def vigenere_cipher(message, key):
         y = (x + k[i % len(k)]) % (len(alphabet))
         b += alphabet[y]
     return b
-print(vigenere_cipher('ПРИШЕЛ ПРИШЕЛ', 'ЗАБЕГ'))
 
+
+print(vigenere_cipher('ПРИШЕЛ ПРИШЕЛ', 'ЗАБЕГ'))
 
 # a program for decoding a message written in the Vigenère cipher,
 # identical, only + must be changed to -

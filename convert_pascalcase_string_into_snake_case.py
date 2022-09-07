@@ -11,6 +11,7 @@ Examples
 1                 -->  "1"
 """
 
+
 def to_underscore(string):
     string = str(string)
     s = ''
@@ -25,5 +26,6 @@ def to_underscore(string):
         elif string[i].islower() and string[i] not in "0":
             s += string[i]
     return s
+
 
 print(to_underscore("TestController"))

@@ -10,7 +10,7 @@ def sol_equa(n):
 
     for i in range(100):
         for j in range(100):
-            if (i**2) - (4 * (j**2)) == n:
+            if (i ** 2) - (4 * (j ** 2)) == n:
                 return [i, j]
             else:
                 continue

@@ -12,7 +12,9 @@ You can find some examples in the test fixtures.
 
 """
 
+
 def make_readable(seconds):
     return "{}:{}:{}".format(seconds // 3600 % 24, (seconds // 60) % 60, (seconds % 60))
+
 
 print(make_readable(86399))

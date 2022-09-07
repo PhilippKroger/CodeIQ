@@ -19,6 +19,7 @@ Example
 
 """
 
+
 def duplicate_count(text):
     d = {}
     ntext = []
@@ -38,5 +39,6 @@ def duplicate_count(text):
     if max(dv) == 1: return 0
     if k_dv > 1: return k_dv
     if k_dv == 1: return 1
+
 
 print(duplicate_count("abcdeaa"))  # 1

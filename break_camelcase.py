@@ -11,6 +11,7 @@ Example
 
 """
 
+
 def solution(s):
     new_s = ''
     for i in range(len(s)):
@@ -20,5 +21,6 @@ def solution(s):
         else:
             new_s += s[i]
     return new_s
+
 
 print(solution("camelCasing"))  # camel Casing

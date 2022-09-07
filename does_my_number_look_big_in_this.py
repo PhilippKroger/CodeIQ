@@ -23,14 +23,16 @@ integers will be passed into the function.
 
 """
 
+
 def narcissistic(value):
     new_value = str(value)
     k = 0
     for i in range(len(str(value))):
-        k += int(new_value[i])**len(str(value))
+        k += int(new_value[i]) ** len(str(value))
     if k == value:
         return True
     else:
         return False
+
 
 print(narcissistic(1652))  # False
