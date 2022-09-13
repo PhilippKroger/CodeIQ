@@ -1,48 +1,27 @@
 from math import log
-
-a = 70
-a = bin(a)[2:]
+a = bin(int(input()))[2:]
 n = len(a)
 k = 0
-print(a)
-while not (2 ** k > k + n):
+while (2 ** k > k + n) == False:
     k += 1
 m = n + k
 b = [0] * (m + 1)
-
-
 for i in range(1, len(b)):
     if log(i, 2) != int(log(i, 2)):
         b[i] = int(a[0])
         a = a[1:]
-b = b[1:]
-print(b)
-
-rk = 2
 for i in range(k):
-    ki = 2**i
+    x = 2
+    ki = 2 ** i  # 1, 2, 4, 8
     s = 0
-    j = i+1
-    while j <=m:
-        for j1 in range(i):
-            if j + j1 <= 12:
-                s += b[j + j1]
-            else:
-                break
-        j += rk
-    rk += 2
-    print(s)
-    if s % 2 == 1:
-        s = 1
-    else:
-        s = 0
-    b[2**i] = s
-print(b)
-
-"""
-    for j in range(ki, m, 2*ki):
-        print(j)
-
-        for j1 in range(i):
-            s += b[j+j1]
-        """
+    j = ki
+    while j <= m:  # ki < m
+        if i > 0:
+            for j1 in range(j):
+                if j + j1 < len(b):
+                    s += b[j + j1]
+        else:
+            s += b[j]  # i == 1
+        j += x ** (i + 1)  # прибавка 12 -> 13
+    b[ki] = s % 2
+print(b[1:])
