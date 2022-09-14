@@ -2,7 +2,7 @@ from math import log
 
 
 def hamming_code(a):
-    """Hamming Code View Implementation"""
+    """Hamming Code Function"""
     n = len(a)
     k = 0
     while (2 ** k > k + n) == False:
