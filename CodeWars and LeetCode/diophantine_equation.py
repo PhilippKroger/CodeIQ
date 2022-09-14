@@ -1,13 +1,7 @@
-"""
-
-https://www.codewars.com/kata/554f76dca89983cc400000bb/train/python
-
-"""
+"""https://www.codewars.com/kata/554f76dca89983cc400000bb/train/python"""
 
 
 def sol_equa(n):
-    # your code
-
     for i in range(100):
         for j in range(100):
             if (i ** 2) - (4 * (j ** 2)) == n:
