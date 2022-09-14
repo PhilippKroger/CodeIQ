@@ -1,7 +1,9 @@
-# Entropy (information theory)<br>
 
-Information entropy is a concept from information theory. It tells how much information there is in an event. In general, the more certain or deterministic the event is, the less information it will contain. More clearly stated, information is an increase in uncertainty or entropy.<br>
+Hamming Code - https://en.wikipedia.org/wiki/Hamming_code<br>
+https://github.com/PhillKroger/CodeIQ/blob/master/The%20Most%20Important%20Implementations/hamming_code.py
 
-![Снимок экрана 2022-09-09 211627](https://user-images.githubusercontent.com/66637696/189417572-a131ae26-b7aa-4f02-8eef-3b39dec39c62.png)
-Simple implementation is provided wth Python here
+Information entropy - https://en.wikipedia.org/wiki/Entropy_(information_theory)<br>
 https://github.com/PhillKroger/CodeIQ/blob/master/The%20Most%20Important%20Implementations/The_Shannon_Entropy.py
+
+ROT 13 - https://en.wikipedia.org/wiki/ROT13 <br>
+https://github.com/PhillKroger/CodeIQ/blob/master/The%20Most%20Important%20Implementations/rot_13.py
