@@ -9,4 +9,7 @@
   <li>
     ROT 13 - https://en.wikipedia.org/wiki/ROT13 <br>
   </li>
+  <li>
+    RLE - https://en.wikipedia.org/wiki/Run-length_encoding
+  </li>
 </ul>
