@@ -22,18 +22,14 @@ def run_length_encoding(a):
 print(run_length_encoding('ABBCCCDDDD'))
 
 
+
 def de_rle(a):
-    #a = []
     s2 = ''
-    #for i in range(0, len(s), 8):
-    #    a.append(s[i:i + 8])
     a.append('00000000')
-    print(a)
     for i in range(0, len(a)-1):
         if a[i][0] == '1':
             s2 += (chr(int(a[i+1], 2)) * int(a[i][1:], 2))
             continue
-            #  a.pop(i+1)
         if a[i][0] == '0':
             s2 += chr(int(a[i+1], 2) * int(a[i][1:], 2))
     return s2
@@ -66,3 +62,17 @@ l = []
             pass
         print(x)
 """
+
+s = '1000111101000001000000100100001001000011'
+a = []
+s2 = ''
+for i in range(8, len(s), 8):
+    a.append(s[i:i+8])
+a.append('00000000')
+for i in range(len(a)-1):
+    if a[1][0] == '1':
+        s2 += (chr(int(a[i+1], 2)) * int(a[i][1:], 2))
+        a.pop(i+1)
+    if a[i][0] == '0':
+        s2 += chr(int(a[i], 2))
+print(s2)
