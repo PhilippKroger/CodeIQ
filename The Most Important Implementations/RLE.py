@@ -22,7 +22,6 @@ def run_length_encoding(a):
 print(run_length_encoding('ABBCCCDDDD'))
 
 
-
 def de_rle(a):
     s2 = ''
     a.append('00000000')
@@ -35,44 +34,32 @@ def de_rle(a):
     return s2
 
 
-print(de_rle(['10001111', '01000001', '00000010', '01000010', '01000011']))  #АААААААААААААААБВ
-#                15            A           2          Б           В
-"""
-            for j in range(i, i+1):
-                x += chr(int(l[j], 2))
-                print(chr(int(l[j], 2)))
-            """
+# print(de_rle(['10001111', '01000001', '00000010', '01000010', '01000011']))  #АААААААААААААААБВ
 
-"""
-l = []
-    for i in range(0, len(a), 8):
-        l.append(a[i:i + 8])
-    x = ''
 
-    for i in range(len(l)+1):
-        ln = int(l[i][1:], 2)
+
+def r(s):
+    l = []
+    xl = ''
+    for i in range(0, len(s), 8):
+        l.append(s[i:i+8])
+    l.append('00000000')
+    print(l)
+    for i in range(len(l)-1):
+        print(l[i])
+        if l[i][0] == '1':
+            xl += int(l[i][1:], 2) * chr((int(l[i+1], 2)))
+            print(int(l[i][1:],2))
+            l.pop(i+1)
 
         if l[i][0] == '0':
-            pass
-        elif l[i][0] == '1':
-            x += str(ln)
-            x += ln * chr(int(l[i+1], 2))
-            continue
-        else:
-            pass
-        print(x)
-"""
+            print(chr(int(l[i], 2)) )
+            k = int(l[i][1:], 2)
+            xl += str(int(l[i][1:], 2))
+            #xl += str(int(l[i], 2))
+            for j in range(i+1, k ):
+                print(j)
+                xl += chr(int(l[i], 2))
+    return xl
 
-s = '1000111101000001000000100100001001000011'
-a = []
-s2 = ''
-for i in range(8, len(s), 8):
-    a.append(s[i:i+8])
-a.append('00000000')
-for i in range(len(a)-1):
-    if a[1][0] == '1':
-        s2 += (chr(int(a[i+1], 2)) * int(a[i][1:], 2))
-        a.pop(i+1)
-    if a[i][0] == '0':
-        s2 += chr(int(a[i], 2))
-print(s2)
+print(r('1000111101000001000000100100001001000011'))
