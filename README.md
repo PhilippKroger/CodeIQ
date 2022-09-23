@@ -2,7 +2,6 @@
   <li>
     Hamming Code - https://en.wikipedia.org/wiki/Hamming_code<br>
   </li>
-  
   <li>
     Information entropy - https://en.wikipedia.org/wiki/Entropy_(information_theory)<br>
   </li>
