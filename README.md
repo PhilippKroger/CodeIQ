@@ -11,4 +11,7 @@
   <li>
     RLE - https://en.wikipedia.org/wiki/Run-length_encoding
   </li>
+  <li>
+    Huffman Code - https://en.wikipedia.org/wiki/Huffman_coding
+  </li>
 </ul>
