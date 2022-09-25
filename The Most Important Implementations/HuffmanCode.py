@@ -1,6 +1,6 @@
-d = {'T': 50, 'H': 53, 'E': 72, 'O': 89, ' ': 179}
 
-d1 = d.copy()
+
+d = {'T': 50, 'H': 53, 'E': 72, 'O': 89, ' ': 179}
 v = sorted(d.values(), reverse=True)
 nv = v.copy()
 snv = []
@@ -15,12 +15,6 @@ for i in range(len(nv)-1):
     nv.append(x)
     print(nv)
 print(snv)
-snv1 = snv.copy()
-
-
-# 1. двум первым значениям добавляем 0 и 1 в str (словарь)
-# 2. сравниваем все значения из i с суммами следующих
-# 3. Если совпадает сумма добавляем к значению в словаре 0 или 1
 
 
 f = []
@@ -28,6 +22,8 @@ fl = {}
 for i in range(len(snv)-1, -1, -1):
     f.append(list(map(str, snv[i])))
 
+
+# Прохождение по массиву, состоящего из подмассивов
 for i in range(len(f)):
     print(f[i])
     if len(f[i]) == 2:
