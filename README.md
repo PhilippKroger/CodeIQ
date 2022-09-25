@@ -1,3 +1,4 @@
+<h2>Concepts that I have explored</h2>
 <ul>
   <li>
     Hamming Code - https://en.wikipedia.org/wiki/Hamming_code<br>
