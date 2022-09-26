@@ -1,11 +1,10 @@
 from math import log
 
-def hummong_code(l):
-    #l = input().split()
+
+def huffman_code(l):
     d = {}
     for i in range(0, len(l), 2):
         d[l[i]] = int(l[i + 1])
-
     v = sorted(d.values(), reverse=True)
     nv = v.copy()
     snv = []
@@ -19,62 +18,56 @@ def hummong_code(l):
         nv.pop()
         nv.append(x)
 
-    fint = []
-    fstr = []
+    f_int, f_str = [], []
     for i in range(len(snv) - 1, -1, -1):
-        fint.append(list(map(int, snv[i])))
-        fstr.append(list(map(str, snv[i])))
+        f_int.append(list(map(int, snv[i])))
+        f_str.append(list(map(str, snv[i])))
 
-    print(fint)
-    print(fstr)
-    f1 = fint.copy()
+    print(f_int)
+    print(f_str)
     print('=' * 100)
-    for i in range(len(fint)):
-        for j in range(i + 1, len(fint)):
+
+    for i in range(len(f_int)):
+        for j in range(i + 1, len(f_int)):
             #  skip [54, 30] [28, 26, 17, 13]
-            if len(fint[j]) // len(fint[i]) == 2:
+            if len(f_int[j]) // len(f_int[i]) == 2:
                 continue
             else:
-                if len(fint[i]) == 2:
-                    fstr[i][0] += '0'
-                    fstr[i][1] += '1'
+                # first iteration [54, 30]
+                if len(f_int[i]) == 2:
+                    f_str[i][0] += '0'
+                    f_str[i][1] += '1'
 
-                for x in range(len(fint[j]) - 1):
-
-                    for y in range(len(fint[j]) - 1):
-                        if fint[i][x] == fint[j][y] + fint[j][y + 1]:
-                            fstr[j][y] += str(fstr[i][x][-1] + '0')
-                            fstr[j][y + 1] += str(fstr[i][x][-1] + '1')
-
+                for x in range(len(f_int[j]) - 1):
+                    for y in range(len(f_int[j]) - 1):
+                        if f_int[i][x] == f_int[j][y] + f_int[j][y + 1]:
+                            f_str[j][y] += str(f_str[i][x][-1] + '0')
+                            f_str[j][y + 1] += str(f_str[i][x][-1] + '1')
                         else:
                             # 30 == 30 or 28 == 26 etc.
-                            if fint[i][x] == fint[j][y]:
-                                fy = len(fstr[i][x]) - len(fstr[j][y])
-                                fstr[j][y] += str(fstr[i][x][-fy:])
+                            if f_int[i][x] == f_int[j][y]:
+                                fy = len(f_str[i][x]) - len(f_str[j][y])
+                                f_str[j][y] += str(f_str[i][x][-fy:])
 
     d1 = {}
-    lfstr = fstr[-1]
+    r = f_str[-1]
     dk = list(d.keys())
-    for i in range(len(lfstr)):
-        lfstrx = len(lfstr[i]) - len(str(v[i]))
-        xd = dk[i]
-        yd = lfstr[i][-lfstrx:]
-        d1[xd] = yd
-    print('1)', d1)
-    dkl = len(dk)  # N
-    i = int(log(dkl, 2))
-    k = sum(list(v))
-    I1 = k * i
-    print('2)', I1, 'бит')
-    I2 = 0
-    d_values = list(d.values())
-    d1_values = list(d1.values())
+    for i in range(len(r)):
+        rx = len(r[i]) - len(str(v[i]))
+        d1[dk[i]] = r[i][-rx:]
+    i1 = sum(list(v)) * int(log(len(dk), 2))  # N = 2^i / I = K*i
+    d_values, d1_values = list(d.values()), list(d1.values())
+    i2 = 0
 
     for i in range(len(d1_values)):
-        I2 += (len(d1_values[i]) * d_values[i])
-    print('3)', I2, 'бит')
-    print('4)', I1 / I2)
+        i2 += (len(d1_values[i]) * d_values[i])
+
+    print('1)', d1)
+    print('2)', i1, 'бит')
+    print('3)', i2, 'бит')
+    print('4)', i1 / i2)
     return
 
-l = input().split()
-print(hummong_code(l))
+
+inp = 'A 26 B 13 C 17 D 28'.split()
+print(huffman_code(inp))
