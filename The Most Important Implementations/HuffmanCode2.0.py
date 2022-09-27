@@ -2,7 +2,6 @@ from math import log
 
 
 def huffman_code(l):
-    """6 step solution"""
     d = {}
     for i in range(0, len(l), 2):
         d[l[i]] = int(l[i + 1])
@@ -25,7 +24,7 @@ def huffman_code(l):
         f_str.append(list(map(str, snv[i])))
 
     print(f_int)
-    print(f_str)
+    # print(f_str)
     print('=' * 100)
 
     for i in range(len(f_int)):
@@ -52,24 +51,25 @@ def huffman_code(l):
                                 f_str[j][y] += str(f_str[i][x][-fy:])
 
     d1 = {}
-    lfstr = f_str[-1]
     dk = list(d.keys())
-    for i in range(len(lfstr)):
-        lfstrx = len(lfstr[i]) - len(str(v[i]))
+    for i in range(len(f_str[-1])):
+        lfstrx = len(f_str[-1][i]) - len(str(v[i]))
         xd = dk[i]
-        yd = lfstr[i][-lfstrx:]
+        yd = f_str[-1][i][-lfstrx:]
         d1[xd] = yd
-    K1 = sum(list(v))
-    I = round(log(len(dk), 2))
-    I1 = K1 * I
-    dd = list(d1.values())
-    I2 = 0
-    for i in range(len(dd)):
-        I2 += (len(dd[i]) * v[i])
-    k = I1 / I2
+    m = sum(list(v)) * round(log(len(dk), 2))  # I1
+    n = 0  # I2
+    for i in range(len(v)):  # I2 += I2
+        n += (len(list(d1.values())[i]) * v[i])
+    k = m / n
 
-    return "1) {} \n 2) {} бит \n 3) {} бит \n 4) {} ".format(d1, I1, I2, k)
+    return " 1) {} \n 2) {} бит \n 3) {} бит \n 4) {} ".format(d1, m, n, k)
 
 
-inp = 'A 100 B 2 C 1'.split()  # A 26 B 13 C 17 D 28
+inp = 'A 26 B 13 C 17 D 28'.split()
 print(huffman_code(inp))
+
+
+# A 26 B 13 C 17 D 28
+# A 100 B 2 C 1
+
