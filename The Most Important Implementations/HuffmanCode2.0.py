@@ -52,21 +52,24 @@ def huffman_code(l):
                                 f_str[j][y] += str(f_str[i][x][-fy:])
 
     d1 = {}
-    r = f_str[-1]
+    lfstr = f_str[-1]
     dk = list(d.keys())
-    for i in range(len(r)):
-        rx = len(r[i]) - len(str(v[i]))
-        d1[dk[i]] = r[i][-rx:]
-    i1 = sum(list(v)) * int(log(len(dk), 2))  # N = 2^i / I = K*i
-    d_values, d1_values = list(d.values()), list(d1.values())
-    i2 = 0
+    for i in range(len(lfstr)):
+        lfstrx = len(lfstr[i]) - len(str(v[i]))
+        xd = dk[i]
+        yd = lfstr[i][-lfstrx:]
+        d1[xd] = yd
+    K1 = sum(list(v))
+    I = round(log(len(dk), 2))
+    I1 = K1 * I
+    dd = list(d1.values())
+    I2 = 0
+    for i in range(len(dd)):
+        I2 += (len(dd[i]) * v[i])
+    k = I1 / I2
 
-    for i in range(len(d1_values)):
-        i2 += (len(d1_values[i]) * d_values[i])
-    k = i1 / i2
-
-    return "1) {} \n 2) {} бит \n 3) {} бит \n 4) {} ".format(d1, i1, i2, k)
+    return "1) {} \n 2) {} бит \n 3) {} бит \n 4) {} ".format(d1, I1, I2, k)
 
 
-inp = 'A 26 B 13 C 17 D 28'.split()
+inp = 'A 100 B 2 C 1'.split()  # A 26 B 13 C 17 D 28
 print(huffman_code(inp))

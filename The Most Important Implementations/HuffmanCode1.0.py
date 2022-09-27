@@ -1,8 +1,8 @@
 from math import log
 
 # l = input().split()
-l = 'A 26 B 13 C 17 D 28'.split()
-#l = 'A 100 B 2 C 1'.split()
+#l = 'A 26 B 13 C 17 D 28'.split()
+l = 'A 100 B 2 C 1'.split()
 d = {}
 for i in range(0, len(l), 2):
     d[l[i]] = int(l[i + 1])
@@ -71,6 +71,22 @@ for i in range(len(lfstr)):
     d1[xd] = yd
 print('1)', d1)
 
+K1 = sum(list(v))
+I = round(log(len(dk), 2))
+I1 = K1 * I
+print('2)', I1, 'бит')
+
+dd = list(d1.values())
+I2 = 0
+print(dd)
+for i in range(len(dd)):
+    I2 += (len(dd[i]) * v[i])
+print(I2)
+
+k = I1 / I2
+print(k)
+
+"""
 dkl = len(dk) # N
 # i = >>>
 i = int(log(dkl, 2))
@@ -93,3 +109,4 @@ for i in range(len(d1_values)):
 print('3)', I2 ,'бит')
 
 print('4)', I1/I2)
+"""
