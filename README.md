@@ -1,4 +1,4 @@
-<h2>Main topics</h2>
+
 <ul>
   <li>
     Hamming Code - https://en.wikipedia.org/wiki/Hamming_code<br>
