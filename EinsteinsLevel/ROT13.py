@@ -17,9 +17,8 @@ Please note that using encode is considered cheating.
 
 
 alphabet = "abcdefghijklmABCDEFGHIJKLMnopqrstuvwxyzNOPQRSTUVWXYZ"
-
 def rot13(message):
-    """We have Caesar's cipher with constant key -> 13"""
+    """We have Caesar's cipher with c_key -> 13"""
     rot13_message = ''
     for i in message:
         if i == '':
@@ -31,6 +30,5 @@ def rot13(message):
         else:
             rot13_message += i
     return rot13_message
-
 
 print(rot13("10+2 vf gjryir."))  # Output: 10+2 is twelve.
