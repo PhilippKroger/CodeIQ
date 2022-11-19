@@ -5,7 +5,7 @@ def road(n, k):
     :return: full path
 
     Example:
-        Input: 8 1 / Output: 1 3 5 7 8 6 4 2
+        Input: 8 1 / Out put: 1 3 5 7 8 6 4 2
         Input: 7 6 / Output: 6 4 2 1 3 5 7
     """
     if n >= 4:
